@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+input=`cat /dev/stdin`
+echo ${input//[[:space:]]/} >/dev/stdin
+
 indent=0
 DONE=false
 read -n1 newChar || DONE=true
@@ -7,6 +10,9 @@ read -n1 newChar || DONE=true
 until $DONE; do
     oldChar=$newChar
     read -n1 newChar || DONE=true
+    if [[ -z "${oldChar// }" ]]; then
+        echo
+    fi
     printf "%s" $oldChar
     case $oldChar in
         '{'|'[')
