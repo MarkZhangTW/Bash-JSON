@@ -5,7 +5,6 @@ Simple JSON parser for bash.
 - GNU Bash 4.4
 
 ## Installation
-1. `cd <dir to bash-json.sh>`
-2. `chmod u+x bash-json.sh`
-3. `cd ~/bin`
-4. `ln -s <fullpath to bash-json.sh> bj`
+1. `git clone https://github.com/HuaiShaoChang/Bash-JSON.git`
+2. `cd Bash-JSON`
+3. `. install.sh`
